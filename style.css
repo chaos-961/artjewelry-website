@@ -1,38 +1,160 @@
+:root {
+    --bg: #f8f8f8;
+    --ink: #111;
+    --soft: #666;
+    --line: #e2e2e2;
+    --accent: #0078ff;
+    --whatsapp: #25d366;
+    --phone: #1a7f4b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f8f8;
+    background-color: var(--bg);
     color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100svh;
     margin: 0;
+    padding: 24px 18px 92px;
+    -webkit-font-smoothing: antialiased;
 }
+
 .container {
     text-align: center;
-}
-h1 {
-    font-size: 3rem;
-    color: #111;
-    margin-bottom: 0.5rem;
-}
-.tagline {
-    font-size: 1.2rem;
-    color: #666;
-}
-footer {
-    position: absolute;
-    bottom: 20px;
-    text-align: center;
     width: 100%;
-    font-size: 0.9rem;
-    color: #444;
+    max-width: 520px;
 }
+
+h1 {
+    font-size: clamp(2.4rem, 9vw, 3.4rem);
+    color: var(--ink);
+    margin: 0 0 0.4rem;
+    letter-spacing: 0.01em;
+}
+
+.tagline {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    color: var(--soft);
+    margin: 0 0 2.2rem;
+}
+
+/* ----- Contact buttons -------------------------------------------------- */
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 50px;
+    padding: 0 20px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--ink);
+    font-size: 0.98rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease, color 160ms ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.contact-button svg {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+}
+
+.contact-button:hover,
+.contact-button:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -14px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+.contact-button.is-email:hover,
+.contact-button.is-email:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.contact-button.is-phone:hover,
+.contact-button.is-phone:focus-visible {
+    border-color: var(--phone);
+    color: var(--phone);
+}
+
+.contact-button.is-whatsapp {
+    background: var(--whatsapp);
+    border-color: var(--whatsapp);
+    color: #fff;
+}
+
+.contact-button.is-whatsapp:hover,
+.contact-button.is-whatsapp:focus-visible {
+    background: #1ebe5a;
+    border-color: #1ebe5a;
+}
+
+/* ----- Footer ----------------------------------------------------------- */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 16px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #444;
+    background: linear-gradient(180deg, rgba(248, 248, 248, 0) 0%, var(--bg) 40%);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .version {
+    margin-top: 4px;
+    font-size: 0.72rem;
+    color: #999;
+    letter-spacing: 0.04em;
+}
+
 footer a {
-    color: #0078ff;
+    color: var(--accent);
     text-decoration: none;
 }
+
 footer a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 420px) {
+    .contact {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-button {
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-button {
+        transition: none;
+    }
 }

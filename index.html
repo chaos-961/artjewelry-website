@@ -4,16 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Jewelry</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Art Jewelry — handcrafted jewelry. Get in touch by email, phone, or WhatsApp." />
+    <meta name="theme-color" content="#f8f8f8" />
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
-    <div class="container">
-        <h1>Hello World</h1>
-        <p class="tagline">Welcome to Art Jewelry</p>
-    </div>
+    <main class="container">
+        <h1>Art Jewelry</h1>
+        <p class="tagline">Handcrafted pieces, made to last.</p>
+
+        <nav class="contact" aria-label="Contact options">
+            <a class="contact-button is-email"
+               href="mailto:artjewelry.work@gmail.com"
+               data-track-link="email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                <span>Email</span>
+            </a>
+
+            <a class="contact-button is-phone"
+               href="tel:+9613884945"
+               data-track-link="phone">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+                <span>Call</span>
+            </a>
+
+            <a class="contact-button is-whatsapp"
+               href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27d%20like%20to%20ask%20about%20a%20piece."
+               target="_blank" rel="noopener"
+               data-track-link="whatsapp">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.98-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+                <span>WhatsApp</span>
+            </a>
+        </nav>
+    </main>
+
     <footer>
-        <p>Contact us: <a href="mailto:artjewelry.work@gmail.com">artjewelry.work@gmail.com</a></p>
+        <p>Contact us: <a href="mailto:artjewelry.work@gmail.com" data-track-link="email">artjewelry.work@gmail.com</a> &middot; <a href="tel:+9613884945" data-track-link="phone">+961 03 884 945</a></p>
+        <p class="version">v0.0.1</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="firebase-config.js?v=1"></script>
+    <script src="analytics.js?v=1" type="module" async></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
