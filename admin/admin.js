@@ -1,17 +1,11 @@
 /*
- * SECURITY NOTE — the encrypted payload is client-side privacy, while Firebase
- * Authentication provides server-enforced access to the statistics.
- *
- * The login below derives a PBKDF2 key from the password and uses it to
- * AES-GCM *decrypt* an embedded blob (payload.js). The same password is sent
- * over HTTPS to Firebase Authentication. Both checks must succeed before the
- * dashboard opens. The encrypted payload ships to every visitor, so a
- * determined attacker can still brute-force a weak password offline — the real
- * gate on the data is the Firebase Auth + Realtime Database rules.
+ * Admin sign-in. The password unlocks a local data bundle and signs in to the
+ * backend; access to private data is enforced by the backend account and the
+ * database rules. The password is never hard-coded — it lives only in the
+ * gitignored .env.local and is used to (re)generate admin/payload.js.
  */
 (function () {
   const form = document.getElementById("adminLoginForm");
-  const nameInput = document.getElementById("adminName");
   const passwordInput = document.getElementById("adminPassword");
   const passwordToggle = document.getElementById("adminPasswordToggle");
   const submitButton = document.getElementById("adminSubmit");
@@ -177,7 +171,6 @@
   const setBusy = (busy) => {
     form.classList.toggle("is-busy", busy);
     submitButton.disabled = busy;
-    nameInput.disabled = busy;
     passwordInput.disabled = busy;
   };
 
@@ -206,15 +199,7 @@
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const username = nameInput.value.trim().toLowerCase();
     let password = passwordInput.value;
-
-    if (username !== "admin") {
-      setStatus("Check the name and password.", true);
-      passwordInput.value = "";
-      passwordInput.focus();
-      return;
-    }
 
     setBusy(true);
     setStatus("Logging in...");
@@ -226,7 +211,6 @@
         stats.authenticate(password)
       ]);
       failedAttempts = 0;
-      nameInput.value = "";
       passwordInput.value = "";
       renderAdmin(bundle);
       password = "";
@@ -244,7 +228,7 @@
       }
       passwordInput.focus();
       setBusy(false);
-      setStatus("Check the name and password.", true);
+      setStatus("Check the password.", true);
     }
   });
 })();
