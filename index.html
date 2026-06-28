@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Jewelry — Handcrafted Fine Jewelry</title>
-    <meta name="description" content="Art Jewelry — timeless, handcrafted pieces made by hand. Get in touch by WhatsApp, phone, or email to commission a piece or ask about availability." />
+    <title>Art Jewelry — Handcrafted Fine Jewelry, Made by Hand in Lebanon</title>
+    <meta name="description" content="Art Jewelry is a small Lebanese atelier making fine, handcrafted pieces — rings, necklaces, earrings, bracelets, bridal and bespoke commissions. Made by hand, to order. Reach out on WhatsApp, phone, or email." />
     <meta name="theme-color" content="#faf8f3" />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Art Jewelry — Handcrafted Fine Jewelry" />
-    <meta property="og:description" content="Timeless pieces, crafted by hand. Get in touch to commission a piece or ask what's available." />
+    <meta property="og:description" content="Small-batch fine jewelry, made by hand in Lebanon. Commission a piece or ask what's ready now." />
     <meta property="og:url" content="https://artjewelry.work/" />
 
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23faf8f3'/%3E%3Cpath d='M32 12l10 12-10 28-10-28z' fill='%23b08642'/%3E%3Cpath d='M22 24h20l-10 10z' fill='%23cfa45f'/%3E%3C/svg%3E" />
@@ -17,59 +17,596 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
-<body>
+<body id="top">
     <div class="backdrop" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
 
-    <main class="hero">
-        <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none"><path d="M32 8l14 16-14 32-14-32z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M18 24h28M32 8 24 24l8 8 8-8z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
-        </span>
+    <!-- Shared SVG gradient definitions (referenced by every illustration) -->
+    <svg class="svg-defs" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="aj-gold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e8c987"/>
+                <stop offset="0.35" stop-color="#c79a4f"/>
+                <stop offset="0.62" stop-color="#b08642"/>
+                <stop offset="1" stop-color="#8c6428"/>
+            </linearGradient>
+            <linearGradient id="aj-gold-soft" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#e6c685"/>
+                <stop offset="1" stop-color="#a87e3c"/>
+            </linearGradient>
+            <radialGradient id="aj-gold-orb" cx="0.36" cy="0.32" r="0.78">
+                <stop offset="0" stop-color="#f3deab"/>
+                <stop offset="0.45" stop-color="#c89c52"/>
+                <stop offset="1" stop-color="#8a6126"/>
+            </radialGradient>
+            <radialGradient id="aj-gem" cx="0.42" cy="0.34" r="0.8">
+                <stop offset="0" stop-color="#ffffff"/>
+                <stop offset="0.3" stop-color="#eef6f7"/>
+                <stop offset="0.7" stop-color="#cfe2e6"/>
+                <stop offset="1" stop-color="#a9c4cb"/>
+            </radialGradient>
+            <linearGradient id="aj-gem-facet" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+                <stop offset="1" stop-color="#bcd4d9" stop-opacity="0.5"/>
+            </linearGradient>
+            <radialGradient id="aj-pearl" cx="0.38" cy="0.3" r="0.85">
+                <stop offset="0" stop-color="#fffdf7"/>
+                <stop offset="0.45" stop-color="#f4ece0"/>
+                <stop offset="1" stop-color="#d9cbb4"/>
+            </radialGradient>
+        </defs>
+    </svg>
 
-        <p class="eyebrow">Fine Handcrafted Jewelry</p>
-        <h1>Art&nbsp;Jewelry</h1>
-        <p class="lede">Timeless pieces, crafted by hand. Reach out to commission a piece or ask about what's available.</p>
-
-        <nav class="contact" aria-label="Contact options">
-            <a class="contact-button is-whatsapp"
-               href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27d%20like%20to%20ask%20about%20a%20piece."
-               target="_blank" rel="noopener"
-               data-track-link="whatsapp">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.98-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
-                <span>Message on WhatsApp</span>
+    <!-- =================================================================
+         Navigation
+         ================================================================= -->
+    <header class="site-nav" data-nav>
+        <div class="nav-inner">
+            <a class="nav-brand" href="#top" aria-label="Art Jewelry — home">
+                <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                    <g fill="none" stroke="url(#aj-gold)" stroke-width="2.4" stroke-linecap="round">
+                        <path d="M34 26 C20 38 20 62 34 74"/>
+                        <path d="M66 26 C80 38 80 62 66 74"/>
+                    </g>
+                    <polygon points="50,40 57,50 50,60 43,50" fill="url(#aj-gem)" stroke="url(#aj-gold)" stroke-width="1.4" stroke-linejoin="round"/>
+                    <path d="M50 41 V59" stroke="#a9c4cb" stroke-width="0.9" stroke-linecap="round" opacity="0.8"/>
+                    <g fill="url(#aj-gold)"><circle cx="37" cy="50" r="1.7"/><circle cx="63" cy="50" r="1.7"/></g>
+                </svg>
+                <span class="wordmark">Art Jewelry</span>
             </a>
 
-            <div class="contact-secondary">
-                <a class="contact-button is-phone"
-                   href="tel:+9613884945"
-                   data-track-link="phone">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
-                    <span>Call</span>
-                </a>
+            <nav class="nav-links" id="nav-menu" aria-label="Primary">
+                <a class="nav-link" href="#signature">Signature</a>
+                <a class="nav-link" href="#collections">Collections</a>
+                <a class="nav-link" href="#atelier">Atelier</a>
+                <a class="nav-link" href="#materials">Materials</a>
+                <a class="nav-link" href="#bespoke">Bespoke</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </nav>
 
-                <a class="contact-button is-email"
-                   href="mailto:artjewelry.work@gmail.com"
-                   data-track-link="email">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-                    <span>Email</span>
-                </a>
+            <a class="btn is-whatsapp nav-cta"
+               href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27d%20like%20to%20ask%20about%20a%20piece."
+               target="_blank" rel="noopener" data-track-link="whatsapp">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.98-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+                <span>WhatsApp</span>
+            </a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+                <span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- =============================================================
+             Hero
+             ============================================================= -->
+        <section class="hero">
+            <span class="nav-sentinel" aria-hidden="true"></span>
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow">Fine Handcrafted Jewelry</p>
+                    <h1>Made <span class="accent">by hand</span>,<br>in Lebanon.</h1>
+                    <p class="lede">Small-batch fine pieces, worked slowly by one pair of hands. Reach out to commission a piece — or ask what's ready now.</p>
+                    <div class="hero-cta">
+                        <a class="btn is-whatsapp"
+                           href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27d%20like%20to%20ask%20about%20a%20piece."
+                           target="_blank" rel="noopener" data-track-link="whatsapp">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.98-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+                            <span>Message us on WhatsApp</span>
+                        </a>
+                        <a class="text-link" href="#signature">View signature pieces <span class="arrow" aria-hidden="true">↓</span></a>
+                    </div>
+                </div>
+
+                <div class="hero-art" aria-hidden="true">
+                    <span class="halo"></span>
+                    <svg viewBox="0 0 260 295" focusable="false">
+                        <!-- soft reflection -->
+                        <ellipse cx="130" cy="262" rx="78" ry="10" fill="#211f1b" opacity="0.05"/>
+                        <!-- orbit ring + accents -->
+                        <circle cx="130" cy="150" r="102" fill="none" stroke="url(#aj-gold)" stroke-width="1" opacity="0.34"/>
+                        <g fill="url(#aj-gold)" opacity="0.7">
+                            <circle cx="232" cy="150" r="2"/>
+                            <circle cx="28" cy="150" r="2"/>
+                            <circle cx="130" cy="252" r="2"/>
+                        </g>
+                        <!-- bail + connector -->
+                        <circle cx="130" cy="46" r="9" fill="none" stroke="url(#aj-gold)" stroke-width="2.4"/>
+                        <path d="M130 55 V90" stroke="url(#aj-gold)" stroke-width="2.4" stroke-linecap="round"/>
+                        <!-- gem girdle -->
+                        <polygon points="130,90 172,108 190,150 172,192 130,210 88,192 70,150 88,108"
+                                 fill="url(#aj-gem)" stroke="url(#aj-gold)" stroke-width="2" stroke-linejoin="round"/>
+                        <!-- table -->
+                        <polygon points="130,120 152,134 160,150 152,166 130,180 108,166 100,150 108,134"
+                                 fill="url(#aj-gem-facet)" stroke="url(#aj-gold)" stroke-width="1.2" stroke-linejoin="round" opacity="0.9"/>
+                        <!-- crown facets -->
+                        <g fill="none" stroke="url(#aj-gold)" stroke-width="1.2" stroke-linecap="round" opacity="0.65">
+                            <path d="M130 120 L130 90 M152 134 L172 108 M160 150 L190 150 M152 166 L172 192 M130 180 L130 210 M108 166 L88 192 M100 150 L70 150 M108 134 L88 108"/>
+                        </g>
+                        <!-- sparkles -->
+                        <path d="M108 110 l2.4 2.4 M110.4 112.4 l-2.4 2.4 M109.2 108 v5 M106.7 110.5 h5" stroke="#ffffff" stroke-width="1" stroke-linecap="round" opacity="0.8"/>
+                        <path d="M170 176 l1.5 1.5 M171.5 177.5 l-1.5 1.5 M170.7 174.5 v3 M169.2 176 h3" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" opacity="0.65"/>
+                        <path d="M196 82 l1.4 1.4 M197.4 83.4 l-1.4 1.4 M196.7 80.5 v3 M195.2 82 h3" stroke="url(#aj-gold)" stroke-width="0.9" stroke-linecap="round" opacity="0.7"/>
+                    </svg>
+                </div>
             </div>
-        </nav>
+
+            <a class="scroll-cue" href="#signature" aria-label="Scroll to explore">
+                <span>Scroll</span>
+                <span class="track" aria-hidden="true"></span>
+            </a>
+        </section>
+
+        <!-- =============================================================
+             Marquee
+             ============================================================= -->
+        <div class="marquee" role="img" aria-label="Handcrafted in Lebanon · 18k solid gold and vermeil · hand-set natural stones · made to order · one of a kind · cared for always">
+            <div class="marquee-track">
+                <span class="mq-group">
+                    <span>Handcrafted in Lebanon</span><span class="sep">✦</span>
+                    <span>18k Solid Gold &amp; Vermeil</span><span class="sep">✦</span>
+                    <span>Hand-Set Natural Stones</span><span class="sep">✦</span>
+                    <span>Made to Order</span><span class="sep">✦</span>
+                    <span>One of a Kind</span><span class="sep">✦</span>
+                    <span>Cared For, Always</span><span class="sep">✦</span>
+                </span>
+                <span class="mq-group" aria-hidden="true">
+                    <span>Handcrafted in Lebanon</span><span class="sep">✦</span>
+                    <span>18k Solid Gold &amp; Vermeil</span><span class="sep">✦</span>
+                    <span>Hand-Set Natural Stones</span><span class="sep">✦</span>
+                    <span>Made to Order</span><span class="sep">✦</span>
+                    <span>One of a Kind</span><span class="sep">✦</span>
+                    <span>Cared For, Always</span><span class="sep">✦</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- =============================================================
+             Signature collection
+             ============================================================= -->
+        <section class="section signature" id="signature">
+            <div class="section-inner">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow">Selected Work</p>
+                    <h2>The Signature Collection</h2>
+                    <p class="section-sub">Six pieces we return to again and again — cedar, jasmine, olive, the sea, and a young moon, drawn from the places that raised them.</p>
+                </header>
+
+                <div class="piece-grid">
+                    <!-- Cedar Signet -->
+                    <article class="piece" data-reveal style="--i:0">
+                        <span class="piece-tag">Made to order</span>
+                        <div class="piece-art">
+                            <svg viewBox="0 0 100 100" role="img" aria-label="Cedar Signet ring">
+                                <circle cx="50" cy="62" r="24" fill="none" stroke="url(#aj-gold)" stroke-width="3"/>
+                                <path d="M30 56 A20 20 0 0 0 70 56" fill="none" stroke="url(#aj-gold)" stroke-width="1.2" opacity="0.5"/>
+                                <ellipse cx="50" cy="30" rx="18" ry="14.5" fill="url(#aj-gold-orb)" stroke="url(#aj-gold)" stroke-width="1.6"/>
+                                <ellipse cx="50" cy="30" rx="14.5" ry="11.5" fill="none" stroke="#6e4e1c" stroke-width="0.7" opacity="0.45"/>
+                                <g fill="#6e4e1c" opacity="0.85">
+                                    <polygon points="38,35 62,35 50,30"/>
+                                    <polygon points="41,31 59,31 50,26"/>
+                                    <polygon points="44,27 56,27 50,22.5"/>
+                                </g>
+                                <path d="M50 35 V37.5" stroke="#6e4e1c" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+                                <path d="M37 41 l1.4 1.4 M38.4 42.4 l-1.4 1.4 M37.7 39.5 v3 M36.2 41 h3" stroke="#fffaf0" stroke-width="0.7" stroke-linecap="round" opacity="0.7"/>
+                            </svg>
+                        </div>
+                        <h3>Cedar Signet</h3>
+                        <p class="piece-material">18k gold vermeil over recycled silver · hand-engraved</p>
+                        <p class="piece-desc">A flat-faced signet engraved with a single cedar — worn smooth like a family seal you were always meant to keep.</p>
+                        <a class="text-link piece-cta"
+                           href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27d%20love%20to%20know%20more%20about%20the%20Cedar%20Signet%20ring."
+                           target="_blank" rel="noopener" data-track-link="whatsapp">Ask about this piece <span class="arrow" aria-hidden="true">→</span></a>
+                    </article>
+
+                    <!-- Byblos Band -->
+                    <article class="piece" data-reveal style="--i:1">
+                        <span class="piece-tag">Made to order</span>
+                        <div class="piece-art">
+                            <svg viewBox="0 0 100 100" role="img" aria-label="Byblos hammered band ring">
+                                <circle cx="50" cy="50" r="26" fill="none" stroke="url(#aj-gold-soft)" stroke-width="9"/>
+                                <circle cx="50" cy="50" r="30.5" fill="none" stroke="#6e4e1c" stroke-width="0.7" opacity="0.45"/>
+                                <circle cx="50" cy="50" r="21.5" fill="none" stroke="#6e4e1c" stroke-width="0.7" opacity="0.4"/>
+                                <g fill="#6e4e1c" opacity="0.4">
+                                    <circle cx="50" cy="24" r="0.9"/><circle cx="61" cy="27" r="0.8"/><circle cx="70" cy="35" r="0.9"/>
+                                    <circle cx="75" cy="46" r="0.8"/><circle cx="74" cy="58" r="0.9"/><circle cx="67" cy="68" r="0.8"/>
+                                    <circle cx="56" cy="74" r="0.9"/><circle cx="44" cy="74" r="0.8"/><circle cx="33" cy="68" r="0.9"/>
+                                    <circle cx="26" cy="58" r="0.8"/><circle cx="25" cy="46" r="0.9"/><circle cx="30" cy="35" r="0.8"/><circle cx="39" cy="27" r="0.9"/>
+                                </g>
+                                <path d="M30 32 A26 26 0 0 1 70 32" fill="none" stroke="#fffaf0" stroke-width="1.1" stroke-linecap="round" opacity="0.4"/>
+                            </svg>
+                        </div>
+                        <h3>Byblos Band</h3>
+                        <p class="piece-material">14k solid gold · hand-hammered finish</p>
+                        <p class="piece-desc">A slim stacking band textured like weathered harbour stone, named for the oldest port still standing.</p>
+                        <a class="text-link piece-cta"
+                           href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27d%20love%20to%20know%20more%20about%20the%20Byblos%20Band."
+                           target="_blank" rel="noopener" data-track-link="whatsapp">Ask about this piece <span class="arrow" aria-hidden="true">→</span></a>
+                    </article>
+
+                    <!-- Jasmine Drop -->
+                    <article class="piece" data-reveal style="--i:2">
+                        <span class="piece-tag">A pair</span>
+                        <div class="piece-art">
+                            <svg viewBox="0 0 100 100" role="img" aria-label="Jasmine Drop earrings">
+                                <defs>
+                                    <g id="aj-jasmine">
+                                        <path d="M28 12 a5 5 0 0 1 8 4 v3" fill="none" stroke="url(#aj-gold)" stroke-width="1.4" stroke-linecap="round"/>
+                                        <path d="M36 19 V27" stroke="url(#aj-gold)" stroke-width="1.4" stroke-linecap="round"/>
+                                        <g fill="url(#aj-gold-soft)" stroke="url(#aj-gold)" stroke-width="1">
+                                            <ellipse cx="36" cy="32" rx="4.8" ry="8.4"/>
+                                            <ellipse cx="36" cy="32" rx="4.8" ry="8.4" transform="rotate(72 36 41)"/>
+                                            <ellipse cx="36" cy="32" rx="4.8" ry="8.4" transform="rotate(144 36 41)"/>
+                                            <ellipse cx="36" cy="32" rx="4.8" ry="8.4" transform="rotate(216 36 41)"/>
+                                            <ellipse cx="36" cy="32" rx="4.8" ry="8.4" transform="rotate(288 36 41)"/>
+                                        </g>
+                                        <circle cx="36" cy="41" r="4.6" fill="url(#aj-pearl)" stroke="url(#aj-gold)" stroke-width="0.8"/>
+                                        <circle cx="34.3" cy="39.3" r="1.1" fill="#fffdf7" opacity="0.9"/>
+                                    </g>
+                                </defs>
+                                <use href="#aj-jasmine"/>
+                                <use href="#aj-jasmine" transform="translate(100,0) scale(-1,1)"/>
+                            </svg>
+                        </div>
+                        <h3>Jasmine Drop</h3>
+                        <p class="piece-material">18k gold vermeil · freshwater pearl center</p>
+                        <p class="piece-desc">Five-petal jasmine blooms that catch the light the way the flower scents a summer courtyard at dusk.</p>
+                        <a class="text-link piece-cta"
+                           href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27d%20love%20to%20know%20more%20about%20the%20Jasmine%20Drop%20earrings."
+                           target="_blank" rel="noopener" data-track-link="whatsapp">Ask about this piece <span class="arrow" aria-hidden="true">→</span></a>
+                    </article>
+
+                    <!-- Crescent Cuff -->
+                    <article class="piece" data-reveal style="--i:0">
+                        <span class="piece-tag">Made to order</span>
+                        <div class="piece-art">
+                            <svg viewBox="0 0 100 100" role="img" aria-label="Crescent Cuff bracelet">
+                                <path d="M38 74 A30 30 0 1 1 62 74" fill="none" stroke="url(#aj-gold-soft)" stroke-width="9" stroke-linecap="round"/>
+                                <path d="M32 52 A22 22 0 0 1 68 52" fill="none" stroke="#fffaf0" stroke-width="1.4" stroke-linecap="round" opacity="0.4"/>
+                                <path d="M40 78 A34 34 0 1 1 60 78" fill="none" stroke="#6e4e1c" stroke-width="0.7" stroke-linecap="round" opacity="0.4"/>
+                            </svg>
+                        </div>
+                        <h3>Crescent Cuff</h3>
+                        <p class="piece-material">18k gold vermeil over recycled silver · polished</p>
+                        <p class="piece-desc">An open cuff that curves like a young moon, sitting against the wrist with a deliberate, weightless gap.</p>
+                        <a class="text-link piece-cta"
+                           href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27d%20love%20to%20know%20more%20about%20the%20Crescent%20Cuff."
+                           target="_blank" rel="noopener" data-track-link="whatsapp">Ask about this piece <span class="arrow" aria-hidden="true">→</span></a>
+                    </article>
+
+                    <!-- Olive & Pearl Necklace -->
+                    <article class="piece" data-reveal style="--i:1">
+                        <span class="piece-tag">Everyday</span>
+                        <div class="piece-art">
+                            <svg viewBox="0 0 100 100" role="img" aria-label="Olive and Pearl necklace">
+                                <path d="M14 22 Q50 64 86 22" fill="none" stroke="url(#aj-gold)" stroke-width="1.6" stroke-linecap="round"/>
+                                <g stroke="url(#aj-gold)" stroke-width="1.1" stroke-linecap="round" opacity="0.5">
+                                    <path d="M26 33 l2.4 3 M37 45 l2.4 3 M63 45 l-2.4 3 M74 33 l-2.4 3"/>
+                                </g>
+                                <g fill="url(#aj-gold)"><circle cx="14" cy="22" r="2.1"/><circle cx="86" cy="22" r="2.1"/></g>
+                                <!-- bails -->
+                                <path d="M50 43 L44 58 M50 43 L58 59" stroke="url(#aj-gold)" stroke-width="1.1" stroke-linecap="round"/>
+                                <!-- olive leaf -->
+                                <path d="M44 58 C39 66 39 76 44 82 C49 76 49 66 44 58 Z" fill="url(#aj-gold-soft)" stroke="url(#aj-gold)" stroke-width="0.9" stroke-linejoin="round"/>
+                                <path d="M44 60 V80" stroke="#6e4e1c" stroke-width="0.7" stroke-linecap="round" opacity="0.5"/>
+                                <!-- pearl -->
+                                <circle cx="58" cy="65" r="5.2" fill="url(#aj-pearl)" stroke="url(#aj-gold)" stroke-width="0.8"/>
+                                <circle cx="56" cy="63" r="1.2" fill="#fffdf7" opacity="0.9"/>
+                            </svg>
+                        </div>
+                        <h3>Olive &amp; Pearl</h3>
+                        <p class="piece-material">14k gold-filled chain · olive-leaf charm · freshwater pearl</p>
+                        <p class="piece-desc">A fine chain carrying one small olive leaf and a single pearl — the everyday charm you forget you're wearing.</p>
+                        <a class="text-link piece-cta"
+                           href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27d%20love%20to%20know%20more%20about%20the%20Olive%20%26%20Pearl%20Necklace."
+                           target="_blank" rel="noopener" data-track-link="whatsapp">Ask about this piece <span class="arrow" aria-hidden="true">→</span></a>
+                    </article>
+
+                    <!-- Mar Bridal Set -->
+                    <article class="piece" data-reveal style="--i:2">
+                        <span class="piece-tag">Bridal · made in pair</span>
+                        <div class="piece-art">
+                            <svg viewBox="0 0 100 100" role="img" aria-label="Mar bridal ring set">
+                                <circle cx="60" cy="62" r="19" fill="none" stroke="url(#aj-gold-soft)" stroke-width="2.4" opacity="0.85"/>
+                                <circle cx="43" cy="60" r="21" fill="none" stroke="url(#aj-gold)" stroke-width="2.6"/>
+                                <path d="M37 41 L38 33 M49 41 L48 33 M43 42 L43 32" fill="none" stroke="url(#aj-gold)" stroke-width="1.3" stroke-linecap="round"/>
+                                <circle cx="43" cy="27" r="9" fill="url(#aj-gem)" stroke="url(#aj-gold)" stroke-width="1.3"/>
+                                <polygon points="43,21 49,25 49,29 43,33 37,29 37,25" fill="url(#aj-gem-facet)" stroke="#a9c4cb" stroke-width="0.7" opacity="0.85"/>
+                                <g fill="none" stroke="#a9c4cb" stroke-width="0.7" stroke-linecap="round" opacity="0.7">
+                                    <path d="M43 21 V18 M49 25 L52 23 M49 29 L52 31 M43 33 V36 M37 29 L34 31 M37 25 L34 23"/>
+                                </g>
+                                <g fill="url(#aj-gold)"><circle cx="36" cy="22" r="1.3"/><circle cx="50" cy="22" r="1.3"/><circle cx="36" cy="32" r="1.3"/><circle cx="50" cy="32" r="1.3"/></g>
+                                <path d="M39 23 l1.3 1.3 M40.3 24.3 l-1.3 1.3 M39.6 21.5 v2.8 M38.2 22.9 h2.8" stroke="#ffffff" stroke-width="0.7" stroke-linecap="round" opacity="0.75"/>
+                            </svg>
+                        </div>
+                        <h3>Mar Bridal Set</h3>
+                        <p class="piece-material">18k solid gold · lab-grown white sapphire · matched band</p>
+                        <p class="piece-desc">A sea-clear solitaire and its companion band, made in pair so two rings sit flush as one quiet line.</p>
+                        <a class="text-link piece-cta"
+                           href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27d%20love%20to%20know%20more%20about%20the%20Mar%20Bridal%20Set."
+                           target="_blank" rel="noopener" data-track-link="whatsapp">Ask about this piece <span class="arrow" aria-hidden="true">→</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================================
+             Browse by category
+             ============================================================= -->
+        <section class="section collections" id="collections">
+            <div class="section-inner">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow">The Collections</p>
+                    <h2>Find your shape</h2>
+                    <p class="section-sub">Rings, necklaces, earrings, bracelets, and bridal. Tell us what you're drawn to and we'll show you what we can make.</p>
+                </header>
+
+                <div class="cat-grid">
+                    <a class="cat" data-reveal style="--i:0"
+                       href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27m%20interested%20in%20your%20rings."
+                       target="_blank" rel="noopener" data-track-link="whatsapp">
+                        <svg viewBox="0 0 100 100" aria-hidden="true">
+                            <circle cx="50" cy="58" r="28" fill="none" stroke="url(#aj-gold)" stroke-width="3.4"/>
+                            <path d="M40 36 L42 28 M60 36 L58 28 M50 37 L50 26" stroke="url(#aj-gold)" stroke-width="2.4" stroke-linecap="round"/>
+                            <polygon points="50,18 58,26 50,34 42,26" fill="url(#aj-gem)" stroke="url(#aj-gold)" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="cat-name">Rings</span>
+                        <span class="cat-desc">Signets · stacking · bridal</span>
+                    </a>
+
+                    <a class="cat" data-reveal style="--i:1"
+                       href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27m%20interested%20in%20your%20necklaces."
+                       target="_blank" rel="noopener" data-track-link="whatsapp">
+                        <svg viewBox="0 0 100 100" aria-hidden="true">
+                            <path d="M16 24 Q50 76 84 24" fill="none" stroke="url(#aj-gold)" stroke-width="3.4" stroke-linecap="round"/>
+                            <path d="M50 50 C44 59 44 76 50 84 C56 76 56 59 50 50 Z" fill="url(#aj-gem)" stroke="url(#aj-gold)" stroke-width="2.2" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="cat-name">Necklaces</span>
+                        <span class="cat-desc">Pendants · chains · charms</span>
+                    </a>
+
+                    <a class="cat" data-reveal style="--i:2"
+                       href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27m%20interested%20in%20your%20earrings."
+                       target="_blank" rel="noopener" data-track-link="whatsapp">
+                        <svg viewBox="0 0 100 100" aria-hidden="true">
+                            <path d="M45 16 a6 6 0 0 1 9 6" fill="none" stroke="url(#aj-gold)" stroke-width="3.2" stroke-linecap="round"/>
+                            <path d="M50 22 C40 38 40 66 50 82 C60 66 60 38 50 22 Z" fill="url(#aj-gem)" stroke="url(#aj-gold)" stroke-width="2.6" stroke-linejoin="round"/>
+                            <path d="M50 32 V74" stroke="#a9c4cb" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+                        </svg>
+                        <span class="cat-name">Earrings</span>
+                        <span class="cat-desc">Drops · studs · hoops</span>
+                    </a>
+
+                    <a class="cat" data-reveal style="--i:3"
+                       href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27m%20interested%20in%20your%20bracelets."
+                       target="_blank" rel="noopener" data-track-link="whatsapp">
+                        <svg viewBox="0 0 100 100" aria-hidden="true">
+                            <path d="M40 70 A28 28 0 1 1 60 70" fill="none" stroke="url(#aj-gold)" stroke-width="3.4" stroke-linecap="round"/>
+                            <circle cx="50" cy="22" r="4.5" fill="url(#aj-gem)" stroke="url(#aj-gold)" stroke-width="2"/>
+                        </svg>
+                        <span class="cat-name">Bracelets</span>
+                        <span class="cat-desc">Cuffs · bangles · chains</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================================
+             Atelier / story
+             ============================================================= -->
+        <section class="section atelier" id="atelier">
+            <div class="section-inner atelier-inner">
+                <div class="atelier-art" data-reveal aria-hidden="true">
+                    <svg viewBox="0 0 200 200" focusable="false">
+                        <!-- bench horizon -->
+                        <path d="M24 150 H176" stroke="url(#aj-gold)" stroke-width="1.4" opacity="0.45"/>
+                        <!-- hand cradling a ring being set -->
+                        <path d="M44 150 C46 120 70 104 100 104 C130 104 154 120 156 150"
+                              fill="none" stroke="url(#aj-gold)" stroke-width="2" opacity="0.55"/>
+                        <!-- jeweller's loupe -->
+                        <circle cx="100" cy="78" r="30" fill="none" stroke="url(#aj-gold)" stroke-width="2.4"/>
+                        <circle cx="100" cy="78" r="24" fill="rgba(235,227,212,0.35)" stroke="#6e4e1c" stroke-width="0.8" opacity="0.5"/>
+                        <path d="M100 108 V128" stroke="url(#aj-gold)" stroke-width="3" stroke-linecap="round"/>
+                        <rect x="92" y="126" width="16" height="8" rx="3" fill="url(#aj-gold-orb)" stroke="url(#aj-gold)" stroke-width="1.2"/>
+                        <!-- a small gem under the loupe -->
+                        <polygon points="100,66 110,74 100,90 90,74" fill="url(#aj-gem)" stroke="url(#aj-gold)" stroke-width="1.4" stroke-linejoin="round"/>
+                        <path d="M90 74 H110 M100 66 V90" stroke="#a9c4cb" stroke-width="0.8" stroke-linecap="round" opacity="0.7"/>
+                        <!-- sparkle -->
+                        <path d="M128 52 l2 2 M130 54 l-2 2 M129 50 v4 M127 52 h4" stroke="url(#aj-gold)" stroke-width="1.1" stroke-linecap="round" opacity="0.75"/>
+                    </svg>
+                </div>
+
+                <div class="atelier-copy">
+                    <p class="eyebrow" data-reveal>The Atelier</p>
+                    <h2 data-reveal>From a small atelier in Lebanon</h2>
+                    <p data-reveal>No factory, no middle hands. Every piece is designed, set, and finished in one studio — and signed off before it ever reaches you.</p>
+                    <blockquote class="maker-quote" data-reveal>
+                        “Gold has a memory — it keeps the warmth of your hand and the marks of the tools. I work slowly, alone, mostly. I'd rather make a few pieces I can stand behind than many I can't. When you reach out, you're talking to the person who will actually make your piece.”
+                        <span class="sig">— The Maker</span>
+                    </blockquote>
+                    <ul class="atelier-points" data-reveal>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Hand-finished</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Made to order</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>One studio, Lebanon</li>
+                    </ul>
+                    <a class="text-link" data-reveal
+                       href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27d%20like%20to%20commission%20a%20custom%20piece."
+                       target="_blank" rel="noopener" data-track-link="whatsapp">Commission a piece <span class="arrow" aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================================
+             Materials & care
+             ============================================================= -->
+        <section class="section materials" id="materials">
+            <div class="section-inner">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow">Materials &amp; Craft</p>
+                    <h2>What it's made of, how to keep it</h2>
+                    <p class="section-sub">A few strong choices, honestly made. Here's exactly what goes into a piece — and how it stays bright for years.</p>
+                </header>
+
+                <div class="mat-grid">
+                    <div class="mat" data-reveal style="--i:0">
+                        <div class="mat-icon">
+                            <svg viewBox="0 0 100 100" aria-hidden="true">
+                                <rect x="22" y="40" width="56" height="30" rx="6" fill="url(#aj-gold-orb)" stroke="url(#aj-gold)" stroke-width="3" transform="rotate(-6 50 55)"/>
+                                <path d="M30 48 H62" stroke="#fffaf0" stroke-width="2" stroke-linecap="round" opacity="0.45" transform="rotate(-6 50 55)"/>
+                            </svg>
+                        </div>
+                        <h3>Solid gold &amp; vermeil</h3>
+                        <p>14k and 18k solid gold, and gold vermeil over recycled silver.</p>
+                    </div>
+
+                    <div class="mat" data-reveal style="--i:1">
+                        <div class="mat-icon">
+                            <svg viewBox="0 0 100 100" aria-hidden="true">
+                                <polygon points="50,20 70,38 50,80 30,38" fill="url(#aj-gem)" stroke="url(#aj-gold)" stroke-width="3" stroke-linejoin="round"/>
+                                <path d="M30 38 H70 M50 20 L50 38 M50 38 L30 38 M50 38 L70 38" stroke="#a9c4cb" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <h3>Hand-set natural stones</h3>
+                        <p>Freshwater pearls and lab-grown stones, set by hand at the bench.</p>
+                    </div>
+
+                    <div class="mat" data-reveal style="--i:2">
+                        <div class="mat-icon">
+                            <svg viewBox="0 0 100 100" aria-hidden="true">
+                                <path d="M28 64 L52 40" stroke="url(#aj-gold)" stroke-width="5" stroke-linecap="round"/>
+                                <rect x="50" y="22" width="26" height="16" rx="4" fill="url(#aj-gold-orb)" stroke="url(#aj-gold)" stroke-width="2.6" transform="rotate(45 63 30)"/>
+                                <circle cx="26" cy="70" r="5" fill="none" stroke="url(#aj-gold)" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <h3>Made to order</h3>
+                        <p>Each piece is made for you — never mass-produced or kept in bulk.</p>
+                    </div>
+
+                    <div class="mat" data-reveal style="--i:3">
+                        <div class="mat-icon">
+                            <svg viewBox="0 0 100 100" aria-hidden="true">
+                                <path d="M50 18 L78 30 V52 C78 70 66 80 50 86 C34 80 22 70 22 52 V30 Z" fill="none" stroke="url(#aj-gold)" stroke-width="3" stroke-linejoin="round"/>
+                                <path d="M40 36 l2.6 2.6 M42.6 38.6 l-2.6 2.6 M41.3 33.5 v5.6 M38.5 36.3 h5.6" stroke="url(#aj-gold)" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+                            </svg>
+                        </div>
+                        <h3>Cared for, always</h3>
+                        <p>Cleaning, re-polishing, and repairs — we look after what we make.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================================
+             Bespoke commission band
+             ============================================================= -->
+        <section class="bespoke" id="bespoke">
+            <div class="bespoke-inner" data-reveal>
+                <p class="eyebrow">Bespoke</p>
+                <h2>Commission something only yours</h2>
+                <p>Bring an heirloom to remake, a date to engrave, or just a feeling. We'll sketch with you and make it by hand, start to finish.</p>
+                <ol class="steps">
+                    <li><span class="num">1</span> Tell us your idea</li>
+                    <li><span class="num">2</span> We design &amp; quote</li>
+                    <li><span class="num">3</span> We craft it by hand</li>
+                </ol>
+                <a class="btn is-whatsapp"
+                   href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27d%20like%20to%20commission%20a%20custom%20piece."
+                   target="_blank" rel="noopener" data-track-link="whatsapp">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.98-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+                    <span>Start your commission</span>
+                </a>
+                <span class="or-email">or <a href="mailto:artjewelry.work@gmail.com?subject=Custom%20commission" data-track-link="email">email the studio</a></span>
+            </div>
+        </section>
+
+        <!-- =============================================================
+             Contact
+             ============================================================= -->
+        <section class="section contact" id="contact">
+            <div class="section-inner">
+                <header class="section-head" data-reveal>
+                    <p class="eyebrow">Get in touch</p>
+                    <h2>Let's talk it through</h2>
+                    <p class="section-sub">Questions, sizes, timelines, or a piece you have in mind — message us on WhatsApp, call, or send an email. We answer personally.</p>
+                </header>
+
+                <div class="contact-grid">
+                    <a class="contact-card is-whatsapp" data-reveal style="--i:0"
+                       href="https://wa.me/9613884945?text=Hi%20Art%20Jewelry%2C%20I%27d%20like%20to%20ask%20about%20a%20piece."
+                       target="_blank" rel="noopener" data-track-link="whatsapp">
+                        <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.98-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42l-.48-.01c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg></span>
+                        <span class="label">WhatsApp · fastest</span>
+                        <span class="value">Message us</span>
+                    </a>
+
+                    <a class="contact-card" data-reveal style="--i:1"
+                       href="tel:+9613884945" data-track-link="phone">
+                        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+                        <span class="label">Call the atelier</span>
+                        <span class="value">+961 03 884 945</span>
+                    </a>
+
+                    <a class="contact-card" data-reveal style="--i:2"
+                       href="mailto:artjewelry.work@gmail.com" data-track-link="email">
+                        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+                        <span class="label">Email the studio</span>
+                        <span class="value">artjewelry.work@gmail.com</span>
+                    </a>
+                </div>
+
+                <p class="contact-note" data-reveal>We answer personally, usually within a day. <span class="dot">·</span> Handcrafted in Lebanon</p>
+            </div>
+        </section>
     </main>
 
     <footer>
+        <span class="footer-brand">
+            <svg viewBox="0 0 100 100" aria-hidden="true">
+                <g fill="none" stroke="url(#aj-gold)" stroke-width="2.4" stroke-linecap="round">
+                    <path d="M34 26 C20 38 20 62 34 74"/>
+                    <path d="M66 26 C80 38 80 62 66 74"/>
+                </g>
+                <polygon points="50,40 57,50 50,60 43,50" fill="url(#aj-gem)" stroke="url(#aj-gold)" stroke-width="1.4" stroke-linejoin="round"/>
+                <g fill="url(#aj-gold)"><circle cx="37" cy="50" r="1.7"/><circle cx="63" cy="50" r="1.7"/></g>
+            </svg>
+            <span>Art Jewelry</span>
+        </span>
         <p class="footer-contact">
             <a href="tel:+9613884945" data-track-link="phone">+961 03 884 945</a>
             <span class="dot">&middot;</span>
             <a href="mailto:artjewelry.work@gmail.com" data-track-link="email">artjewelry.work@gmail.com</a>
         </p>
-        <p class="version">v0.0.3</p> <!-- version: bump +0.0.1 each release; after x.x.9 roll to x.(x+1).0 (e.g. 0.0.9 -> 0.1.0) -->
+        <p class="footer-tag">Handcrafted fine jewelry · Lebanon</p>
+        <p class="version">v0.0.5</p> <!-- version: bump +0.0.1 each release; after x.x.9 roll to x.(x+1).0 (e.g. 0.0.9 -> 0.1.0) -->
     </footer>
 
     <script src="firebase-config.js?v=1"></script>
     <script src="analytics.js?v=1" type="module" async></script>
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
 </body>
 </html>
