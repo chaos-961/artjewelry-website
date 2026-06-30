@@ -29,7 +29,6 @@ tools/
 .env.*
 *.secret
 *.secret.local
-admin-secrets.local.*
 
 # Dependencies / build output
 node_modules/
@@ -41,13 +40,6 @@ _site/
 .parcel-cache/
 playwright-report/
 test-results/
-
-# Firebase local tooling
-.firebase/
-firebase-debug.log*
-database-debug.log*
-firestore-debug.log*
-ui-debug.log*
 
 # Logs / temp
 *.log

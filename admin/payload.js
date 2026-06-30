@@ -1,1 +1,0 @@
-window.ARTJEWELRY_ADMIN_PAYLOAD = {"version":1,"algorithm":"AES-GCM","kdf":"PBKDF2-SHA-256","iterations":600000,"salt":"Lm65UyCokR1TGAcqEVFLZA==","iv":"1tr/+bSjHUVmqCmN","ciphertext":"lqNC4TJEHTHbrcOjMsTNErp1JsjTx9B9L/6vpb+BP1fFh85pUFPPF+A6IkO1QTnK"};

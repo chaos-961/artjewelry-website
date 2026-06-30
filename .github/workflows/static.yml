@@ -30,8 +30,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p _site
-          cp index.html style.css script.js analytics.js firebase-config.js _site/
-          cp -R admin _site/
+          cp index.html style.css script.js _site/
           if [ -f CNAME ]; then cp CNAME _site/; fi
           touch _site/.nojekyll
       - name: Upload artifact

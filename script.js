@@ -1,9 +1,8 @@
 // Front-end behaviour for Art Jewelry.
-// Analytics live in analytics.js (loaded as a module). This file only adds
-// progressive-enhancement UI: scroll reveals, the sticky-nav state, scroll-spy,
-// the mobile menu, and a subtle hero parallax. Everything degrades gracefully
-// and respects prefers-reduced-motion. It never intercepts the contact links,
-// so the data-track-link analytics keep firing untouched.
+// Progressive-enhancement UI only: scroll reveals, the sticky-nav state,
+// scroll-spy, the mobile menu, and a subtle hero parallax. Everything degrades
+// gracefully and respects prefers-reduced-motion. It never intercepts the
+// contact links, so they always open WhatsApp / mail / phone untouched.
 
 (function () {
     "use strict";
